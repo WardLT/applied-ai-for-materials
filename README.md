@@ -6,6 +6,12 @@ This repository is a collection of notebooks and other materials used for the "A
 
 I have broken subject areas into different directories each with their own notebooks, lecture notes and Python environment. They will generally be arranged as having multiple subfolders that focus on a specific topic. 
 
+### Related Resources
+
+I am also collecting the lecture materials and, eventually, the videos associated with this material.
+
+- [Slides](https://1drv.ms/u/s!AswJEkleh18Ah49dGc89htZMDm65cw?e=3GMRig): Slides available in PDF and PPTX format from OneDrive. This is my live copy
+
 ## Course Outline
 
 The course is broken out in to the following molecules (all of which are TBD):
