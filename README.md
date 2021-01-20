@@ -1,5 +1,7 @@
 # Applied AI for Materials
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/WardLT/applied-ai-for-materials/HEAD)
+
 This repository is a collection of notebooks and other materials used for the "Applied Artificial Intelligence for Materials Science and Engineering" course at The University of Chicago. It is very much a work in progress, so expect large changes in content and organization in the next few months.
 
 ## Using this Repository
