@@ -33,9 +33,3 @@ Then activate with
 ```bash
 conda activate molml
 ```
-
-Once activated, download the data used in the tutorial
-
-```bash
-python download-data.py
-```
