@@ -6,11 +6,22 @@ This repository is a collection of notebooks and other materials used for the "A
 
 ## Using this Repository
 
-I have broken subject areas into different directories each with their own notebooks, lecture notes and Python environment. They will generally be arranged as having multiple subfolders that focus on a specific topic. 
+Each subject area is organized into its own directory with notebooks, lecture notes and Python environment. They will generally be arranged as having multiple subfolders that focus on a specific subtopic. 
+
+### Working from Binder
+
+You can run all of the notebooks using [Binder](https://jupyter.org/binder). 
+Simply click [this link](https://mybinder.org/v2/gh/WardLT/applied-ai-for-materials/HEAD) to launch a copy of the repository on cloud resources. 
+It will not save your changes, but you can use it for exploring the notebooks and - if you download notebooks to your computer - completing the practical assignments.
+
+### Local Installation
+
+Either download the repository as a ZIP file or [clone it using git](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
+The computational environments needed for each module are described in the README for that module. 
 
 ### Related Resources
 
-I am also collecting the lecture materials and, eventually, the videos associated with this material.
+Further resources available for this course are available elsewhere:
 
 - [Slides](https://1drv.ms/u/s!AswJEkleh18Ah49dGc89htZMDm65cw?e=3GMRig): Slides available in PDF and PPTX format from OneDrive. This is my live copy
 
