@@ -21,3 +21,4 @@ dependencies:
   - pip
   - pip:
     - git+https://github.com/qmlcode/qml.git@develop
+    - dscribe==0.4.0
