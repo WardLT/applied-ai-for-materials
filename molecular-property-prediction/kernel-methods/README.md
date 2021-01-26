@@ -7,9 +7,9 @@ These notebooks introduce the theory and methods behind them.
 
 Through completing these modules, you should be able to:
 
-- [ ] Use both [DScribe](https://singroup.github.io/dscribe/latest/) and [QML](http://www.qmlcode.org/) to fir a kernel learning model.
+- [ ] Use both [DScribe](https://singroup.github.io/dscribe/latest/) and [QML](http://www.qmlcode.org/) to fit a kernel learning model.
 - [ ] Know which hyperparameters of KRR to tune and how
-- [ ] Understand the benefits scalable kernels and the limitations around training set size vs computational cost.
+- [ ] Understand the benefits of scalable kernels and the limitations around training set size vs computational cost.
 
 ## Assignments
 
