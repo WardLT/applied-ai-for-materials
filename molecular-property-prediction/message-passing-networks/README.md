@@ -2,10 +2,10 @@
 
 This module explains how to build a Message-Passing Neural Network (MPNN) from scratch using Tensorflow.
 
-The code in these libraries is close to what is used in early versions of [`nfp`](https://github.com/NREL/nfp).
+The code in these libraries is close to what is used in early versions of [nfp](https://github.com/NREL/nfp).
 If you are looking to do more state-of-the art deep learning on molecules, I would recommend learning a package
-like [`nfp`](https://github.com/NREL/nfp), ['megnet'](https://github.com/materialsvirtuallab/megnet),
-['schnetpack'](https://schnetpack.readthedocs.io/en/stable/), or ['deepchem'](https://deepchem.io/).
+like [nfp](https://github.com/NREL/nfp), [megnet](https://github.com/materialsvirtuallab/megnet),
+[schnetpack](https://schnetpack.readthedocs.io/en/stable/), or [deepchem](https://deepchem.io/).
 The methods employed in our MPNN are simplified for learning purposes and intended to teach
 what is going on in more sophisticated packages.
 
