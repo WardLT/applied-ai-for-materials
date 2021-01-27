@@ -13,6 +13,7 @@ dependencies:
   - rdkit==2020.03.*
   - ase==3.19.*
   - mordred==1.2.*
+  - tensorflow==2.3.*
   - jedi<0.18  # 0.18 currently incompatible with Jupyter
   - tqdm
   - jupyterlab
