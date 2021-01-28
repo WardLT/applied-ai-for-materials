@@ -19,11 +19,14 @@ It will not save your changes, but you can use it for exploring the notebooks an
 Either download the repository as a ZIP file or [clone it using git](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
 The computational environments needed for each module are described in the README for that module. 
 
+If you install using git, you can update the course materials through calling `git pull` from within the directory. 
+Otherwise, you will need to re-download the repository to receive updates.
+
 ### Related Resources
 
 Further resources available for this course are available elsewhere:
 
-- [Slides](https://1drv.ms/u/s!AswJEkleh18Ah49dGc89htZMDm65cw?e=3GMRig): Slides available in PDF and PPTX format from OneDrive. This is my live copy
+- [Slides](https://1drv.ms/u/s!AswJEkleh18Ah49dGc89htZMDm65cw?e=3GMRig): My working copy of the slides, available in PDF and PPTX format from OneDrive.
 
 ## Course Outline
 
