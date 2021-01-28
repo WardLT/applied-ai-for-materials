@@ -11,7 +11,3 @@ Through completing these modules, you should be able to:
 - [ ] Compute chemical descriptors and molecular fingerprints
 - [ ] Train a descriptor machine learning model using a common "reduce then fit" pattern
 - [ ] Train a fingerprint-based machine learning model using a KNN model.
-
-## Assignments
-
-TBD
