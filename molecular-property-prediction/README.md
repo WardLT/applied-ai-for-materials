@@ -14,7 +14,9 @@ The major goals of this module include:
 
 ## Installation
 
-We have a large Python environment for this particular module. It will require a system with a Fortran compiler and, so, we recommend using either Linux, Mac OS (following [these notes](http://www.qmlcode.org/installation.html#note-on-apple-mac-support)) or the Windows Subsystem for Linux.
+We have a large Python environment for this particular module, which includes some dependencies that have installation difficulties.
+
+### Linux
 
 Before installing the environment, ensure you have installed a Fortran compiler and a LAPACK library. If running on Ubuntu, do so by calling:
 
@@ -22,7 +24,24 @@ Before installing the environment, ensure you have installed a Fortran compiler 
 sudo apt install gfortran liblapack-dev
 ```
 
-Install the environment using
+### Mac OSX
+
+You will need to install the GNU Compiler Collecton (GCC). The recommended route is to use [Homebrew]. Follow the installation instructions on [brew.sh](https://brew.sh/), then call
+
+```bash
+brew install gcc
+```
+
+It may also be possible to install GCC by adding ``- gcc`` to your ``environment.yml`` files.
+
+### Windows
+
+The recommended route to running these notebooks on Windows is to use Windows Subsystem for Linux (WSL). Follow the instructions from the [App Store](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6) to install Ubuntu via WSL, then install Anaconda and the required libraries from the Linux instructions.
+
+
+### All
+
+Once you have the Fortran compilers installed, build the environment using
 
 ```bash
 conda env create --file environment.yml --force
