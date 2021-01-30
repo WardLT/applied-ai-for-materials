@@ -33,7 +33,7 @@ The course is broken out in to the following modules (some of which are TBD):
 - [Molecular property prediction](./molecular-property-prediction): How physics, chemistry and machine learning fit together
   - Topics: Kernel and graph methods, chemoinformatics
 - Supervised learning for inorganics: The importance of microstructure, composition and processing 
-  - Topics: Representations for inorganic materials, coping with processing varation
+  - Topics: Representations for inorganic materials, coping with processing variation
 - Generative methods for materials: Augmenting human creativity with AI
   - Topics: Generative Adversarial Networks, Reinforcement Learning, Autoencoders
 - Bayesian parameter estimation: Greater certainty in using physics-based models
@@ -50,6 +50,8 @@ The course is broken out in to the following modules (some of which are TBD):
 Each course module contains its own Python environment, instruction notebooks and assignments for evaluating comprehension.
 
 The installation Python environments are described in the README for each module. 
+
+The answer keys for the comprehension assignments are encrypted and can be decrypted with the [provided script](./bin/). Message me to get the passphrase or notebooks.
 
 Some modules are broken into a few different subdirectories with their own notebooks and assignments.
 

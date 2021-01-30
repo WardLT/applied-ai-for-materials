@@ -1,0 +1,19 @@
+name: matml
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python==3.7.*
+  - numpy==1.19.*
+  - pandas==1.*
+  - scikit-learn==0.23.*
+  - matplotlib==3.*
+  - pymatgen==2020.12.31
+  - jedi<0.18  # 0.18 currently incompatible with Jupyter
+  - tqdm
+  - jupyterlab
+  - psutil
+  - pytest
+  - pip
+  - pip:
+    - matminer==0.6.*
