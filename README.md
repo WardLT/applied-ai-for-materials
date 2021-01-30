@@ -32,7 +32,7 @@ The course is broken out in to the following modules (some of which are TBD):
   - Topics: Databases, laboratory information systems, image publication
 - [Molecular property prediction](./molecular-property-prediction): How physics, chemistry and machine learning fit together
   - Topics: Kernel and graph methods, chemoinformatics
-- Supervised learning for inorganics: The importance of microstructure, composition and processing 
+- [Supervised learning for inorganics](./ml-for-inorganic-materials): The importance of microstructure, composition and processing 
   - Topics: Representations for inorganic materials, coping with processing variation
 - Generative methods for materials: Augmenting human creativity with AI
   - Topics: Generative Adversarial Networks, Reinforcement Learning, Autoencoders
