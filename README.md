@@ -22,15 +22,9 @@ The computational environments needed for each module are described in the READM
 If you install using git, you can update the course materials through calling `git pull` from within the directory. 
 Otherwise, you will need to re-download the repository to receive updates.
 
-### Related Resources
+## Course Layout
 
-Further resources available for this course are available elsewhere:
-
-- [Slides](https://1drv.ms/u/s!AswJEkleh18Ah49dGc89htZMDm65cw?e=3GMRig): My working copy of the slides, available in PDF and PPTX format from OneDrive.
-
-## Course Outline
-
-The course is broken out in to the following molecules (all of which are TBD):
+The course is broken out in to the following modules (some of which are TBD):
 
 - Effectively using Python for data science: Working quickly and reproducibly with Anaconda and Jupyter 
   - Topics: Managing Python environments PyData Stack, Jupyter Notebooks
@@ -50,3 +44,17 @@ The course is broken out in to the following molecules (all of which are TBD):
   - Topics: Bayesian Optimization, active learning
 - Robotics and laboratory automation: Software for the "labs of the future"
   - Topics: Applications of robots to materials design, software infrastructure
+
+### Module Layout
+
+Each course module contains its own Python environment, instruction notebooks and assignments for evaluating comprehension.
+
+The installation Python environments are described in the README for each module. 
+
+Some modules are broken into a few different subdirectories with their own notebooks and assignments.
+
+## Related Resources
+
+Further resources available for this course are available elsewhere:
+
+- [Slides](https://1drv.ms/u/s!AswJEkleh18Ah49dGc89htZMDm65cw?e=3GMRig): My working copy of the slides, available in PDF and PPTX format from OneDrive.

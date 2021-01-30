@@ -1,0 +1,4 @@
+#! /bin/bash
+
+homework_key=`dirname $0`/.answer-passwd
+gpg --batch --passphrase-file $homework_key -c $1 

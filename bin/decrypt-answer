@@ -1,0 +1,9 @@
+#! /bin/bash
+
+homework_key=`dirname $0`/.answer-passwd
+decrypt_name=${1:0:-4}
+if [ -e $decrypt_name ]; then
+  echo "Decrypt file already exits. Remove $decrypt_name then try again"
+else
+  gpg --batch --passphrase-file $homework_key -o $decrypt_name -d $1 
+fi
