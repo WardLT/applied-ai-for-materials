@@ -11,6 +11,3 @@ Through completing these modules, you should be able to:
 - [ ] Know which hyperparameters of KRR to tune and how
 - [ ] Understand the benefits scalable kernels and the limitations around training set size vs computational cost.
 
-## Assignments
-
-None for this module yet!
