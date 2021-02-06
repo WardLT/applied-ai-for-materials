@@ -1,23 +1,25 @@
 
-*Hint*: `Shift`+`Tab` in Jupyter brings up documentation for a function. You may be reading much documentation for functions during this exercise.
+*Hint*: `Shift`+`Tab` in Jupyter brings up documentation for a function. You may be reading much documentation for functions during this exercise. You could also refer to the official documentation of deep learning modules on [TensorFlow](https://www.tensorflow.org/guide).
 
 ## Question 1: Making data loaders.
 
 Our first step to create data loaders for the training, validation, and test data from the [datasets provided with this repository](../datasets).
 
-Use the `make_loader` function the `mpnn` library to create a data loader for each.
+Use the `make_loader` function the `mpnn` library to create a data loader for each, with `batch_size` of 32.
 You can change the output property for each loader and a few other key settings:
 
-- Why should you use a "shuffle" value for the training data loader? Which parameter do you set?
+- It's generally a rule of thumb to enable "shuffle" when creating the training data loader. Why is that? Which parameter do you set?
 - Sample a few batches from the training data? What is the average of the output variable?
+
+*Hint*: Investigate the documentation for `mpnn.data.make_data_loader` using Jupyter hotkey mentioned above or look into the source code in the local `mpnn` directory.
 
 ## Question 2: Plotting atomic features
 
-Build a model creation function that allows you to set the number of features, numbers of message layers and which readout function is used for the `Readout` layer.
+Build a model creation function `make_model` that allows you to set the number of features, numbers of message layers and which readout function is used for the `Readout` layer.
 
 Create a model with 0 message passing steps and 2 features. 
 
-Train the model using the atomization energy (`u0_atom`) with a batch size of 64 for 8 epochs with the training data. (*Hint*: Investigate the documentation for `mpnn.data.make_data_loader`.)
+Train the model using the atomization energy (`u0_atom`) for 8 epochs with the training data. Using Adam as the optimizer and mean squared error as the loss function.
 
 Build a model to output the representation for each atom using second model using the trained model (here called `model`):
 
@@ -35,6 +37,8 @@ Use it to output the atomic representations for each model in the training set u
 Repeat the "train then output representation" process with networks that have 1 and 2 message passing layers:
 
 - Make a scatter plot of the atomic features from all three models. What are the clusters? Why do they blur with more message passing layers?
+
+*Hint*: Simply plot the second feature against the first.
 
 ## Question 3: Training a network for real
 
@@ -109,7 +113,7 @@ reasonable values for the output (with adding the scale layer)
 Use both the training and validation loaders. Run for 128 epochs with a batch size of 32 with an early stopping patience of 8 epochs. 
 Make sure to use `restore_best_weights=True` in your callback.
 
-Now, repeat steps 2-3 with 0, 1, 2 and 4 message passing layers (please use `verbose=False` when fitting, so the notebooks aren't huge):
+Now, repeat steps 2-3 with 0, 1, 4 and 8 message passing layers (please use `verbose=False` when fitting, so the notebooks aren't huge):
 
 - Plot the change in the best loss on the test set as a function of number of layers. Do you observe a continual increase with the number of layers?
 
@@ -121,7 +125,8 @@ So, our choice of summation for the readout function is a good one: more atoms m
 
 Band gaps, on the other hand, do not have such a scaling behavior.
 They are instead due to a property of two specific atoms in the molecule: one that has a high-energy occupied orbital and
-a second that has
+a second that has a low-energy unoccupied orbital.
+
 In this problem, we will explore the effect of changing the "Readout function."
 
 Train a total of 4 models each with 4 message passing steps and 64 features but varying whether we use `u0_atom` or `bandgap` to fit the model
