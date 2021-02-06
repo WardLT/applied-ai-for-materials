@@ -5,7 +5,7 @@ We are going to recreate their work in this assignment by making an improved mod
 
 ## Problem 1: Fitting a Coulomb Matrix
 
-Load in our QM9 dataset and compute the Coulomb matrix for each entry.
+Load in our QM9 dataset and compute the [Coulomb matrix](https://singroup.github.io/dscribe/latest/tutorials/coulomb_matrix.html) for each entry. Set maximum number of atoms to be 40. (QM9 dataset encompasses molecules with up to nine “heavy” atoms from the range C, O, N and F. So the molecule having most atoms would simply be Nonane, C<sub>9</sub>H<sub>20</sub>.)
 
 Fit a model with 100 parameters to predict the HOMO energy using [KernelRidge](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html) regression. Make sure to fit the $\alpha$ and $\gamma$ parameters using [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html).
 
