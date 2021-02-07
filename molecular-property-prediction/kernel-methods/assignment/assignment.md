@@ -7,11 +7,13 @@ We are going to recreate their work in this assignment by making an improved mod
 
 Load in our QM9 dataset and compute the [Coulomb matrix](https://singroup.github.io/dscribe/latest/tutorials/coulomb_matrix.html) for each entry. Set maximum number of atoms to be 40. (QM9 dataset encompasses molecules with up to nine “heavy” atoms from the range C, O, N and F. So the molecule having most atoms would simply be Nonane, C<sub>9</sub>H<sub>20</sub>.)
 
-Fit a model with 100 parameters to predict the HOMO energy using [KernelRidge](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html) regression. Make sure to fit the $\alpha$ and $\gamma$ parameters using [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html).
+Make a test set of 1000 entries.
 
-*HINT*: Use parameters varying between $10^{-6}$ and $10^0$ with a logarithmic spacing.
+Fit a model with 100 parameters to predict the HOMO energy (`'homo'`) using [KernelRidge](https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html) regression with an RBF kernel. Make sure to fit the $\alpha$ and $\gamma$ parameters using [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html).
 
-Repeat the fitting process 16 times using different samples of 100 entries. Plot a histrogram of the optimized $\alpha$ and $\gamma$ parameters and the MAE on a separate test set.
+*HINT*: Use parameters varying between $10^{-6}$ and $10^0$ with a logarithmic spacing of 16 steps.
+
+Repeat the fitting process 16 times using different samples of 100 entries. Plot three [histrograms](https://matplotlib.org/3.3.3/api/_as_gen/matplotlib.pyplot.hist.html) of the optimized $\alpha$, $\gamma$ parameters and the MAE on a separate test set, respectively.
 
 - Do the optimized model parameters change with different subsets?
 - How large of a variation do you observe in the training data?
@@ -19,9 +21,9 @@ Repeat the fitting process 16 times using different samples of 100 entries. Plot
 
 ## Problem 2: Plot a learning curve
 
-Fit the Coulomb Matrix model using 4 randomly-selected training sets of 10, 100, and 1000 entries.
+Fit the Coulomb Matrix model using randomly-selected training sets of 10, 100, and 1000 entries, each training for 4 replicates.
 
-- Plot how the model accuracy on a test set, training time and inference times change as a function of training set size.
+- Plot how the averaged model accuracy on a test set, training time and inference times change as a function of training set size.
 
 ## Problem 3: Optimize the training set. 
 
@@ -29,7 +31,7 @@ We are going to use a genetic algorithm to determine an optimized training set w
 
 First, separate off a "validation set" of 1000 entries from the training set that we will use to assess the performance of our specially-chosen training sets.
 
-Now, implement a function that will accept a list of points from the training set by their index and produce the score of that model on the validation set. 
+Now, implement a function that will accept a list of points from the training set by their index and produce the score of that model on the validation set using MAE. 
 This function will be used by the genetic algorithm to score each selection of points.
 It should fulfill the following signature:
 
@@ -49,8 +51,8 @@ def evaluate_subset(points: list, model, train_data: pd.DataFrame, test_data: pd
 
 Next, run the genetic algorithm code provided at the end of this document (also includes an explaination of GAs) and:
 
-- Plot the best score in the population change as a function of generation. *Hint*: Convert the `all_options` to a DataFrame and use Panda's [aggregation functions].
-- Plot the performance of your optimized model with the learning curve from problem 2. How does it compare?
+- Plot the best score in the population change as a function of generation. *Hint*: Convert the `all_options` to a DataFrame and use Panda's [aggregation functions](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.aggregate.html).
+- Plot the performance of your optimized model (which would be a single dot in this case) with the learning curve from problem 2. How does it compare?
 
 ## Appendix: Genetic Algorithm Code
 
