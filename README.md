@@ -36,7 +36,7 @@ The course is broken out in to the following modules (some of which are TBD):
   - Topics: Representations for inorganic materials, coping with processing variation
 - Generative methods for materials: Augmenting human creativity with AI
   - Topics: Generative Adversarial Networks, Reinforcement Learning, Autoencoders
-- Bayesian parameter estimation: Greater certainty in using physics-based models
+- [Bayesian parameter estimation](./bayesian-statistics): Achieving greater certainty in using physics-based models
   - Topics: UQ for CALPHAD, model selection, learning from noisy data
 - Computer vision and characterization: Better microscopy through intelligent software
   - Topics: Image segmentation, classification and noise reduction

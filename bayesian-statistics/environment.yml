@@ -1,0 +1,16 @@
+name: bayes
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python==3.7.*
+  - numpy==1.19.*
+  - pandas==1.*
+  - scikit-learn==0.23.*
+  - matplotlib==3.*
+  - corner==2.1.*
+  - kombine==0.8.*
+  - tqdm
+  - jupyterlab
+  - psutil
+  - pip
