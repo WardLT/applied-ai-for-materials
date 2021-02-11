@@ -16,6 +16,7 @@ dependencies:
   - corner==2.1.*
   - kombine==0.8.*
   - pymatgen==2020.12.31
+  - modal==0.4.*
   - tensorflow>2
   - jedi<0.18  # 0.18 currently incompatible with Jupyter
   - tqdm
