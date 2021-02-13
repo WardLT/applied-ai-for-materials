@@ -40,10 +40,8 @@ The course is broken out in to the following modules (some of which are TBD):
   - Topics: UQ for CALPHAD, model selection, learning from noisy data
 - Computer vision and characterization: Better microscopy through intelligent software
   - Topics: Image segmentation, classification and noise reduction
-- Optimal experimental design: Accelerate design optimization with software-assisted planning
+- [Optimal experimental design](./optimal-experimental-design): Accelerate design optimization with software-assisted planning
   - Topics: Bayesian Optimization, active learning
-- Robotics and laboratory automation: Software for the "labs of the future"
-  - Topics: Applications of robots to materials design, software infrastructure
 
 ### Module Layout
 
