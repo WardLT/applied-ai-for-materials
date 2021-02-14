@@ -1,0 +1,18 @@
+name: molgen
+channels:
+  - defaults
+  - conda-forge
+  - openbabel
+dependencies:
+  - python==3.7.*
+  - numpy==1.19.*
+  - pandas==1.*
+  - scikit-learn==0.23.*
+  - matplotlib==3.*
+  - openbabel==2.4.*
+  - rdkit==2020.03.*
+  - tensorflow==2.3.*
+  - tqdm
+  - jupyterlab
+  - gym
+  - pip
