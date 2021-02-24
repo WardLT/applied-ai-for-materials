@@ -27,7 +27,7 @@ Load the data from that search with Pandas:
 butane = pd.read_csv('data/n-butane.csv')
 ```
 
-Then, generate a subset of the data where we fix `phi_2` to be constant
+Then, generate a subset of the data where we fix `phi_2` to be constant so that the global energy is minimized (as in Example 1).
 
 
 
@@ -72,13 +72,13 @@ gpr = GaussianProcessRegressor(
 
 *Note*: This is different than the [`ExponentialSineKernel` class](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.ExpSineSquared.html) from scikit-learn, which sums the distances over all coordinates _first_ before computing the sine function. In contrast, our function computes the sine-distance over each point and then evaluates the sine function.
 
-Take a random subset of 2 points from `butane_1d.` Use those points to  to fit a model with an RBF kernel and the Sine kernel. Note that you should add ` n_restarts_optimizer=16` to the arguments for the RBF model to be able to fit our data well.
+Take a random subset of 2 points from `butane_1d.` Use those points to fit a model with the Sine kernel introduced above and an RBF kernel (find how in scikit-learn documentation). Note that you should add ` n_restarts_optimizer=16` to the arguments for the RBF model to be able to fit our data well.
 
-- Plot the mean and standard deviations of the predictions as a function of `phi_1`. Which function is a better approximator of the energy?
+- Plot the mean and standard deviations of the predictions as a function of `phi_1`. Which function is a better approximator of the energy? (You may want to run the fitting multiple times to avoid basing your conclusion on haphazard, while you only need to show two plots in the notebook, one for each kernel, respectively).
 
-Next, train an RBF and Sine kernel model on the full, 2D dataset. Train a model with randomly-selected subsets of 3, 10, 30, and 100 points. Measure the error on the full dataset. 
+Next, go back to the original 2D dataset with no constraint on `phi_2`. Train a series of models with each of the two kernels, with randomly-selected subsets of 3, 10, 30, and 100 points (in all there should be 2 x 4 models). Measure the error on the full dataset. 
 
-- Plot the error in the RBF kernel and Sine kernel as a function of training set size. Which model performs better? Explain why.
+- Plot the error in the Sine kernel model and the RBF kernel model as a function of training set size. Which model performs better? Explain why.
 
 ### Part B: Bayesian Optimization for Conformer Search
 
@@ -104,20 +104,20 @@ Once you have it a step of the process of "pick next point then add to training 
 ```python
 chosen_inds, chosen_coords = optimizer.query(butane[input_cols].values)
 optimizer.teach(
-    chosen_coords,  # BO gives you the selected coordinates
-    -butane['energy'].iloc[chosen_points].values  # Lookup from the available data
+    butane[input_cols].iloc[chosen_inds].values, 
+    -butane['energy'].iloc[chosen_inds].values
 )
 ```
 
-Run an active learning search where you start with 4 points that were determined randomly and then select 8 points using 
+Run an active learning search where you start with 4 points that were determined randomly and then select 16 points using 
 [maximum expected improvment (`max_EI`)](https://modal-python.readthedocs.io/en/latest/content/query_strategies/Acquisition-functions.html#expected-improvement)
 and [uncertainty sampling `max_std_sampling`](https://modal-python.readthedocs.io/en/latest/content/query_strategies/Disagreement-sampling.html#standard-deviation-sampling).
 
 - Plot the lowest-energy conformer as a function of step for each strategy. Which query strategy finds the lowest-energy conformer?
-    - **HINT**: Use `np.minimum.accumulate(-optimizer.y_training)` to quickly get the minimum at each step
-- Measure the performance of the model on the full butane dataset. Which query strategy creates the best model?
+    - **HINT**: Use `np.minimum.accumulate` to quickly get the minimum at each step
+- Measure the prediction performance of the model on the full butane dataset. Which query strategy creates the best model?
     - **HINT**: Use `optimizer.predict` to invoke the model used by an optimizer
-- Explain the difference between the two query strategies and why their performances are different
+- Explain the difference between the two query strategies and why their performances are different.
 
 
 ## Problem 2: Optimizing cysteine
@@ -169,7 +169,7 @@ def evaluate_energy(angles):
 
 We use a simple "generate random points" and minimize them strategy. 
 This strategy generates a series of random points, uses a local optimizer ([Nelder-Mead](https://en.wikipedia.org/wiki/Nelder%E2%80%93Mead_method)) to find the nearby minimum in energy,
-and then returns a list of all fo the points sampled for the optimizer's consideration.
+and then returns a list of all of the points sampled for the optimizer's consideration.
 We use the optimizer's model rather than the `evaluate_energy` function so that this function is very fast.
 
 ```python
@@ -222,9 +222,9 @@ Write a loop that follows the following procedure:
 
 1. Use the `get_search_space` function to create a series of points to be sampled
 2. Select the best points to query with the optimizer
-3. Evaluate the energy of the best points using `evaluate_energy`
+3. Evaluate the energy of the best points using `evaluate_energy` so that the results are more accurate, with reasonable sacrifice in efficiency
 4. Add the best points and new energies to the training set of the optimizer
 
-Run the loop 64 times to try to find the lowest energy conformer. This may take a half hour.
+Run the loop 32 times to try to find the lowest energy conformer. This may take a half hour.
 
 - Plot the energy of each sampled point as a function of step. Describe the energies of the conformers compared to that of the one produced by OpenBabel ($E = -660.57$ Ha)
