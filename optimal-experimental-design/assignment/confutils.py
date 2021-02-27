@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 from typing import List, Tuple, Dict, Set
 
-from xtb.ase.calculator import XTB
+from ase.calculators.psi4 import Psi4
 from ase.constraints import FixInternals
 from ase.optimize import BFGS
 from ase.io.xyz import read_xyz
@@ -11,10 +11,11 @@ from ase import Atoms
 from openbabel import OBMolBondIter
 from io import StringIO
 import networkx as nx
+import torchani
 import pybel
 import os
 
-calc = XTB(method="GFN2-xTB", accuracy=0.01)
+calc = torchani.models.ANI2x().ase()
 
 
 def get_initial_structure(smiles: str) -> Tuple[Atoms, Dict[int, Set[int]]]:

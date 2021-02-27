@@ -227,4 +227,4 @@ Write a loop that follows the following procedure:
 
 Run the loop 32 times to try to find the lowest energy conformer. This may take a half hour.
 
-- Plot the energy of each sampled point as a function of step. Describe the energies of the conformers compared to that of the one produced by OpenBabel ($E = -660.57$ Ha)
+- Plot the energy of each sampled point as a function of step. Describe the energies of the conformers compared to that of the one produced by OpenBabel ($E = -19641.7084$ Ha)

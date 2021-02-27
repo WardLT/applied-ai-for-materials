@@ -14,7 +14,7 @@ dependencies:
   - ase==3.21.*
   - scipy==1.5.2
   - networkx
-  - xtb-python
+  - torchani
   - modal==0.4.*
   - tqdm
   - jupyterlab
