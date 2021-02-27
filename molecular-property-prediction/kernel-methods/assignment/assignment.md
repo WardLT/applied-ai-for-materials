@@ -16,7 +16,7 @@ Fit a model with 100 parameters to predict the HOMO energy (`'homo'`) using [Ker
 Repeat the fitting process 16 times using different samples of 100 entries. Plot three [histrograms](https://matplotlib.org/3.3.3/api/_as_gen/matplotlib.pyplot.hist.html) of the optimized $\alpha$, $\gamma$ parameters and the MAE on a separate test set, respectively.
 
 - Do the optimized model parameters change with different subsets?
-- How large of a variation do you observe in the training data?
+- How large of a variation do you observe in the hyperparameters ($\alpha$, $\gamma$)?
 - Can we use the same set of parameters for all subsets of 100 entries?
 
 ## Problem 2: Plot a learning curve
