@@ -58,3 +58,4 @@ Some modules are broken into a few different subdirectories with their own noteb
 Further resources available for this course are available elsewhere:
 
 - [Slides](https://1drv.ms/u/s!AswJEkleh18Ah49dGc89htZMDm65cw?e=3GMRig): My working copy of the slides, available in PDF and PPTX format from OneDrive.
+- [Lecture Recordings](https://www.youtube.com/watch?v=6ofUaBAIF0U&list=PLEjVJ0F11Nmn8Rc0OblMtzFfOGI1rAeIf): From Winter 21 are on [YouTube](https://www.youtube.com/watch?v=6ofUaBAIF0U&list=PLEjVJ0F11Nmn8Rc0OblMtzFfOGI1rAeIf)
