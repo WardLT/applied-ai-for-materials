@@ -12,7 +12,7 @@ Each subject area is organized into its own directory with notebooks, lecture no
 
 You can run all of the notebooks using [Binder](https://jupyter.org/binder). 
 Simply click [this link](https://mybinder.org/v2/gh/WardLT/applied-ai-for-materials/HEAD) to launch a copy of the repository on cloud resources. 
-It will not save your changes, but you can use it for exploring the notebooks and - if you download notebooks to your computer - completing the practical assignments.
+**It will not save your changes**, but you can use it for exploring the notebooks and - if you download notebooks to your computer - completing the practical assignments.
 
 ### Local Installation
 
