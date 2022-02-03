@@ -24,7 +24,7 @@ First, load the *full* subset of [QM9](http://quantum-machine.org/datasets/#qm9)
 2. Now we look at two models specifically in the previous question, the LASSO without PCA and RandomForest trained on $10^4$ data points. Rank the top features for LASSO (using coefficients) and random forest (using the assigned feature scores) (Hint: [np.argsort](https://numpy.org/doc/stable/reference/generated/numpy.argsort.html)).
 
     1. Compare the top 10 features with lasso and random forest (Hint: [Python set logic](https://www.w3schools.com/python/python_sets_join.asp)). Are any the same? Why is this expected?
-    1. Assess the correlation between top 10 features for LASSO, and then (separately) between top 10 features from random forest. What does this imply about how to interpret the most important features?
+    1. Assess the correlation between top 10 features for LASSO (e.g., the correlation between features i and j), and then (separately) between top 10 features from random forest. What does this imply about how to interpret the most important features?
     1. Re-fit the model another time for one of the models, on a newly sampled set of $10^3$ data points. Do the results change between runs with different random seeds? 
     
    Describe what these results mean for interpreting the features of machine learning models. 
