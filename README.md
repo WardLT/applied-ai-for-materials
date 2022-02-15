@@ -12,7 +12,7 @@ Each subject area is organized into its own directory with notebooks, lecture no
 
 You can run all of the notebooks using [Binder](https://jupyter.org/binder). 
 Simply click [this link](https://mybinder.org/v2/gh/WardLT/applied-ai-for-materials/HEAD) to launch a copy of the repository on cloud resources. 
-It will not save your changes, but you can use it for exploring the notebooks and - if you download notebooks to your computer - completing the practical assignments.
+**It will not save your changes**, but you can use it for exploring the notebooks and - if you download notebooks to your computer - completing the practical assignments.
 
 ### Local Installation
 
@@ -57,4 +57,6 @@ Some modules are broken into a few different subdirectories with their own noteb
 
 Further resources available for this course are available elsewhere:
 
+- [Syllabus](https://1drv.ms/b/s!AswJEkleh18Ah5pEQM8zCT0uVf6Stg?e=B0ZGJU): Most recent syllabus for the associated course.
 - [Slides](https://1drv.ms/u/s!AswJEkleh18Ah49dGc89htZMDm65cw?e=3GMRig): My working copy of the slides, available in PDF and PPTX format from OneDrive.
+- [Lecture Recordings](https://www.youtube.com/watch?v=6ofUaBAIF0U&list=PLEjVJ0F11Nmn8Rc0OblMtzFfOGI1rAeIf): From Winter 21 are on [YouTube](https://www.youtube.com/watch?v=6ofUaBAIF0U&list=PLEjVJ0F11Nmn8Rc0OblMtzFfOGI1rAeIf)
