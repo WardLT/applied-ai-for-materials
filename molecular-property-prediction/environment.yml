@@ -2,19 +2,17 @@ name: molml
 channels:
   - defaults
   - conda-forge
-  - openbabel
 dependencies:
-  - python==3.7.*
+  - python==3.9.*
   - numpy==1.19.*
   - pandas==1.*
   - scikit-learn==0.23.*
   - matplotlib==3.*
-  - openbabel==2.4.*
+  - openbabel==3.*
   - rdkit==2020.03.*
-  - ase==3.19.*
+  - ase==3.21.*
   - mordred==1.2.*
   - tensorflow==2.3.*
-  - jedi<0.18  # 0.18 currently incompatible with Jupyter
   - tqdm
   - jupyterlab
   - psutil
