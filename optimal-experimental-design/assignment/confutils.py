@@ -8,11 +8,10 @@ from ase.constraints import FixInternals
 from ase.optimize import BFGS
 from ase.io.xyz import read_xyz
 from ase import Atoms
-from openbabel import OBMolBondIter
+from openbabel import OBMolBondIter, pybel
 from io import StringIO
 import networkx as nx
 import torchani
-import pybel
 import os
 
 calc = torchani.models.ANI2x().ase()

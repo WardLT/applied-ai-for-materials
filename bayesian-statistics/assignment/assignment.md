@@ -8,6 +8,12 @@ The goal of this assignment is to learn models for the properties of liquid Hf a
 - Making models less outlier sensitive
 - Learning dataset weights
 
+### Installation Issues
+
+The "sampler" can only run on a single process on Windows (it has to do with [how subprocesses are started](https://www.pythonforthelab.com/blog/differences-between-multiprocessing-windows-and-linux/)). 
+Add the option `pool=kombine.serialpool.SerialPool()` when creating a kombine `Sampler` class (ex: `kombine.Sampler(128, 5, ln_posterior_t, pool=kombine.serialpool.SerialPool()`) to force kombine to run on a single process
+if you are using Windows.
+
 ## Setup: Loading the the data
 
 We provide two of the datasets from Paulson2019 to use in this assignment. Load them into memory using Pandas:

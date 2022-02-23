@@ -17,10 +17,14 @@ Simply click [this link](https://mybinder.org/v2/gh/WardLT/applied-ai-for-materi
 ### Local Installation
 
 Either download the repository as a ZIP file or [clone it using git](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
-The computational environments needed for each module are described in the README for that module. 
 
 If you install using git, you can update the course materials through calling `git pull` from within the directory. 
 Otherwise, you will need to re-download the repository to receive updates.
+
+Installing the environment is easiest if you are running Linux.
+First install the build tools needed to compile Fortran and C++ packages used by some instructions.
+
+If you are running Windows or OS X, see [`further instructions`](./envs/README.md)
 
 ## Course Layout
 
@@ -45,9 +49,7 @@ The course is broken out in to the following modules (some of which are TBD):
 
 ### Module Layout
 
-Each course module contains its own Python environment, instruction notebooks and assignments for evaluating comprehension.
-
-The installation Python environments are described in the README for each module. 
+Each course module contains its own instruction notebooks and assignments for evaluating comprehension.
 
 The answer keys for the comprehension assignments are encrypted and can be decrypted with the [provided script](./bin/). Message me to get the passphrase or notebooks.
 

@@ -1,3 +1,4 @@
+build-essentials
 gfortran
 libblas-dev
 liblapack-dev

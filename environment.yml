@@ -2,22 +2,35 @@ name: applied-ai
 channels:
   - defaults
   - conda-forge
+  - pytorch
 dependencies:
-  - python==3.9.*
-  - numpy==1.19.*
+  # General dependencies
+  - python==3.8.*
+  - scipy==1.6.*
   - pandas==1.*
-  - scikit-learn==0.23.*
+  - scikit-learn==1.0.*
   - matplotlib==3.*
+  - tensorflow==2.4.*  # Gets the CPU version of TF (change to tensorflow-gpu for GPU)
+  - pytorch-cpu==1.10.* # Gets the CPU version of TF (change to pytorch for GPU)
+  
+  # Related to molecular property prediction
   - openbabel==3.*
   - rdkit==2020.03.*
   - ase==3.21.*
   - mordred==1.2.*
+  
+  # Related to Bayesian
   - corner==2.1.*
   - kombine==0.8.*
   - pymatgen==2020.12.31
+  
+  # Related to optimal experimental design
   - modal==0.4.*
-  - tensorflow>2
-  - jedi<0.18  # 0.18 currently incompatible with Jupyter
+  - networkx
+  - torchani==2.2.2
+  - modal==0.4.*
+  
+  # Utilities
   - tqdm
   - jupyterlab
   - psutil
