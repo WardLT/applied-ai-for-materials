@@ -21,7 +21,8 @@ Repeat the fitting process 16 times using different samples of 100 entries. Plot
 
 ## Problem 2: Plot a learning curve
 
-Fit the Coulomb Matrix model using randomly-selected training sets of 10, 100, and 1000 entries, each training for 4 replicates.
+Fit the Coulomb Matrix model using randomly-selected training sets of 10, 100, and 1000 entries.
+Repeat the experiment 4 times with each training set size, picking a different randomly-selected set each time.
 
 - Plot how the averaged model accuracy on a test set, training time and inference times change as a function of training set size.
 
