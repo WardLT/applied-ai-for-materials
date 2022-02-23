@@ -24,7 +24,7 @@ Otherwise, you will need to re-download the repository to receive updates.
 Installing the environment is easiest if you are running Linux.
 First install the build tools needed to compile Fortran and C++ packages used by some instructions.
 
-If you are running Windows or OS X, see [`further instructions`](./envs/README.md)
+See [**further instructions**](./envs/README.md) for a step-by-step.
 
 ## Course Layout
 
