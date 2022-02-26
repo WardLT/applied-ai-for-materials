@@ -40,6 +40,12 @@ sudo apt install build-essentials gfortran libblas-dev liblapack-dev
 
 If you cannot install the libraries, remove the `qml` and `dscribe` libraries from your build environment by adding a "#" to the beginning of the line containing those packages in `environment.yml`.
 
+Then, install the environment by calling
+
+```
+mamba env create --file envs/environment-windows.yml --force
+```
+
 ### Windows (10 or greater)
 
 The [`envs/environment-windows.yml`](./environment-windows.yml) contains an environment with versions of packages that will install properly on Windows. 
@@ -55,7 +61,7 @@ If you do so, you will not need Visual Studio.
 Once you either install Visual Studio or remove the DScribe package, then you can install the environment with:
 
 ```
-mamba install --file envs/environment-windows.yml --force
+mamba env create --file envs/environment-windows.yml --force
 ```
 
 ### OS X
@@ -72,7 +78,7 @@ If you do so, you will not need XCode.
 Once you either install XCode or remove the DScribe package, then you can install the environment with:
 
 ```
-mamba install --file envs/environment-osx.yml --force
+mamba env create --file envs/environment-osx.yml --force
 ```
 
 
