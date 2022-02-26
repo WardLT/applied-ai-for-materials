@@ -35,7 +35,7 @@ Many compute clusters (e.g., RCC at UChicago) should have these installed alread
 If you are using Ubuntu, you can install them with:
 
 ```
-sudo apt install build-essentials gfortran libblas-dev liblapack-dev
+sudo apt install build-essential gfortran libblas-dev liblapack-dev
 ```
 
 If you cannot install the libraries, remove the `qml` and `dscribe` libraries from your build environment by adding a "#" to the beginning of the line containing those packages in `environment.yml`.
