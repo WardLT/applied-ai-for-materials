@@ -21,10 +21,17 @@ Either download the repository as a ZIP file or [clone it using git](https://doc
 If you install using git, you can update the course materials through calling `git pull` from within the directory. 
 Otherwise, you will need to re-download the repository to receive updates.
 
-Installing the environment is easiest if you are running Linux.
-First install the build tools needed to compile Fortran and C++ packages used by some instructions.
+Installing the environment is easiest if you are running Ubuntu Linux.
+First install the build toolsneeded to compile Fortran and C++ packages used by some packages, which are listed listed in [apt.txt](./apt.txt).
 
-See [**further instructions**](./envs/README.md) for a step-by-step.
+Then, use [mamba](https://mamba.readthedocs.io/en/latest/) to build the Python environment:
+
+```
+conda install -c conda-forge mamba
+mamba env create --file environment.yml --force
+```
+
+See [**further instructions**](./envs/README.md) for a step-by-step for Ubuntu and other operating systems.
 
 ## Course Layout
 
