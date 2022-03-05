@@ -161,6 +161,10 @@ class Posterior:
 ```
 
 As a consistency check, the log posterior of [5000, 35, 0.005, 1, 1] should be -1222.21.
+To help debugging, the individual componets of that value should be:
+- Log probability of $C_p$ data: -385.71
+- Log probability of $H$ data: -826.82
+- Log probability of prior: -9.67
 
 **HINT**: Make the function and call it with the following lines
 ```python
