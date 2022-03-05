@@ -59,7 +59,7 @@ Compute the median of `residual` to estimate $c_0$.
 - Make a plot of enthalpy $H$ against temperature $T$. Show both the data points and the fitted curve.
 
 Construct prior distributions using `scipy`'s [Normal distribution](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html#scipy.stats.norm) 
-setting the location to be the values of the parameter and the scale to be 50% of that parameter value.
+setting the location to be the values of the parameters determined by the curve fitting and the scale to be 50% of the parameter value.
 
 - Make 3 plots showing the prior distribution (probability density) of 3 parameters.
 - What is the **log** prior probability of $c_0$ = 5000, $c_1$ = 35, and $c_2$ = 0.005?
