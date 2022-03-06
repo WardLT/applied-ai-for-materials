@@ -90,6 +90,8 @@ $P(D_i|\theta,M) = \mathcal{N}(D_i|M(T_i|\theta), \sigma_i/\alpha_D)$
 
 where $\mathcal{N}(x|y,\sigma)$ is the probability distribution function for the normal distribution with mean $y$ and standard deviation $\sigma$.
 
+> Remember that your datasets come with uncertainties for each point in the `sigma_` columns.
+
 We assume that the probability of each data point is independent, so you can compute the probability of the whole dataset as:
 
 $P(D|\theta,M) = \prod_i P(D_i|\theta,M) = \sum_i \log P(D_i|theta,M)$
@@ -138,7 +140,9 @@ class Posterior:
         ## FILL ME IN!
         
     def logprob_prior(self, params):
-        """Compute the log probability of the parameters given the prior distributions
+        """Compute the log probability of the parameters given the prior distributions.
+        
+        Includes the prior for model parameters and the "dataset weights" (\alpha)
         
         Args:
             params ([float]): Chosen parameters
