@@ -204,7 +204,13 @@ We can do this by switching from using a normal distribution when defining the l
 
 Repeat Problem 2 and 3, but changing the normal distribution used in the `logprob_cp_data` and `logprob_h_data` functions to [a Student t distribution](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html#scipy.stats.t) with a `df` of 2.1.
 
--Re-measure the mean and confidence intervals of $c_2$ and re-plot the mean and confidence intervals of $C_p$ as a function of temperature
+As a consistency check, the log posterior of [5000, 35, 0.005, 1, 1] should be -340.841.
+To help debugging, the individual componets of that value should be:
+- Log probability of $C_p$ data: -62.20
+- Log probability of $H$ data: -266.60
+- Log probability of prior: -12.04
+
+Re-measure the mean and confidence intervals of $c_2$ and re-plot the mean and confidence intervals of $C_p$ as a function of temperature
 
 - Is $c_2$ larger or smaller?
 - Does the model have the same systematic errors or are they smaller? Describe why the change has occured?
