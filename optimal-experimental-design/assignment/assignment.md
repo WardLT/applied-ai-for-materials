@@ -72,9 +72,9 @@ gpr = GaussianProcessRegressor(
 
 *Note*: This is different than the [`ExponentialSineKernel` class](https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.ExpSineSquared.html) from scikit-learn, which sums the distances over all coordinates _first_ before computing the sine function. In contrast, our function computes the sine-distance over each point and then evaluates the sine function.
 
-Take a random subset of 2 points from `butane_1d.` Use those points to fit a model with the Sine kernel introduced above and an RBF kernel (find how in scikit-learn documentation). Note that you should add ` n_restarts_optimizer=16` to the arguments for the RBF model to be able to fit our data well.
+Take a random subset of 2 points from `butane_1d.` Use those points to fit a model with the Sine kernel introduced above and an RBF kernel (find how in [scikit-learn documentation](https://scikit-learn.org/stable/modules/gaussian_process.html#gpr-examples)). Note that you should add ` n_restarts_optimizer=16` to the arguments for the RBF model to be able to fit our data well.
 
-- Plot the mean and standard deviations of the predictions as a function of `phi_1`. Which function is a better approximator of the energy? (You may want to run the fitting multiple times to avoid basing your conclusion on haphazard, while you only need to show two plots in the notebook, one for each kernel, respectively).
+- Plot the mean and standard deviations of the predictions as a function of `phi_1`. Which function is a better approximator of the energy? (You may want to run the fitting multiple times to avoid basing your conclusion on a single run, but you only need to show two plots in the notebook - one for each kernel, respectively).
 
 Next, go back to the original 2D dataset with no constraint on `phi_2`. Train a series of models with each of the two kernels, with randomly-selected subsets of 3, 10, 30, and 100 points (in all there should be 2 x 4 models). Measure the error on the full dataset. 
 
