@@ -170,7 +170,8 @@ To help debugging, the individual componets of that value should be:
 - Log probability of $H$ data: -826.82
 - Log probability of prior: -12.04
 
-**HINT**: Make the function and call it with the following lines
+Make the function and call it with the following lines to show you implemented it correctly.
+
 ```python
 
 ln_posterior = Posterior(cp_data, h_data, priors)
@@ -183,10 +184,11 @@ Our next tasks is to make samples from the posterior.
 
 First, sample 128 points from the prior distribution for each of the model parameters and store them as a `128 x 5` array.
 
-Next, create a sampler using Kombine with 128 walkers using the posterior function you made in Problem 2. Then burn in the sampler using the initial points sampled from the prior as a starting point.
+Next, create a sampler using Kombine with 128 walkers using the posterior function you made in Problem 2.
+Then burn in the sampler using the initial points sampled from the prior as a starting point.
 
 - Make a burn-in curve of acceptance probability against steps. 
-- How many steps did it take for the sampler to converge? (Please do **NOT** simply read from the plot. Try to get more accurate statistics out of the sampler objects. Same for next question.)
+- How many steps did it take for the sampler to converge?
 - What was the acceptance probability of the last 5 steps? (If it is not ~0.5, re-run the burn in)
 
 Run the convered sampler for 64 more steps and then draw all of the samples from the posterior. 
